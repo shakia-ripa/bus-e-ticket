@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <nav class="my-2">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="./index.html" class="text-[#030712B3] text-lg font-semibold font-raleway">Home</a></li>
+                            <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">About</a></li>
+                            <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Destination</a></li>
+                            <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl md:text-4xl font-extrabold font-raleway">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a href="./index.html"  class="text-[#030712B3] text-lg font-semibold font-raleway">Home</a></li>
+                        <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">About</a></li>
+                        <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Destination</a></li>
+                        <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end ">
+                    <button class="btn text-[#1DD100] bg-[#d2ddd031] border-2 border-[#1DD10066]">Bus <img
+                            src="./images/bus-icon.png" alt=""></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+                
+        
+                <!-- Ticket -->
+        
+                <div id="tickets-section" class="bg-[#F7F8F8] rounded-3xl border-t-2 border-[#1DD100] py-14 md:py-20 lg:py-28">
+                    <!-- titles section -->
+                    <div class="mx-5 lg:w-[90%] lg:mx-auto">
+                        <div class="text-center">
+                            <h2 class="font-raleway font-bold text-3xl md:text-4xl">P Paribahan</h2>
+                            <p class="font-inter text-sm md:text-lg text-[#03071299] md:w-3/5 mx-auto mt-6 mb-10">
+                                Enjoy hassle-free reservations, secure transactions, and flexible options tailored to your
+                                travel needs, all at your fingertips.
+                            </p>
+                        </div>
+        
+                        <!-- route details -->
+                        <div class="bg-white my-5 flex flex-col md:flex-row items-center rounded-3xl">
+                            <!-- route description -->
+                            <div class="w-full md:w-auto flex-1 p-6">
+        
+                                <!-- logo and seat -->
+                                <div class="flex flex-col md:flex-row md:justify-between items-center mb-6">
+                                    <div class="flex items-center gap-1 mb-3 md:mb-0">
+                                        <img class="w-[50px] h-[40px] lg:w-[60px] lg:h-[50px]" src="./images/bus-logo.png"
+                                            alt="">
+                                        <div>
+                                            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold font-raleway">PHero Paribahan
+                                            </h4>
+                                            <p class=" text-xs md:text-sm  lg:text-base font-inter text-[#03071299]">
+                                                Coach-009-WEB ! AC_Business</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="btn text-[#1DD100] bg-[#1DD10026] border-2 border-[#1DD10066] w-full md:w-auto"><span
+                                            id="seat-left">40</span> Seats left
+                                        <img src="./images/seat-green.png" alt=""></button>
+                                </div>
+        
+                                <div class="w-full md:w-auto bg-[#F7F8F8] rounded-3xl p-6 space-y-3">
+                                    <p class="flex justify-between border-dotted border-b-2 border-[#03071233] pb-3">
+                                        <span>Route</span><span id="from">Dhaka</span>-<span id="to">Sylhet</span>
+                                    </p>
+                                    <p class="flex justify-between border-dotted border-b-2 border-[#03071233] pb-3">
+                                        <span>Departure Time</span><span>9:00 PM</span>
+                                    </p>
+                                    <p class="flex flex-col lg:flex-row justify-between  gap-2 space-y-4 lg:space-y-0">
+                                        <Button class="btn">Boarding Point - <span id="boarding">Dhaka</span></Button>
+                                        <Button class="btn">Dropping Point - <span id="dropping">Sylhet</span></Button>
+                                        <Button class="btn">Est.Time - 11 Hour</Button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="hidden md:block " src="./images/info-devider.png" alt="">
+                            </div>
+                            <div
+                                class="w-full md:w-1/5 flex flex-row md:flex-col justify-center items-center gap-4 md:space-y-1 mb-4 md:mb-0">
+                                <img class="w-[40px]" src="./images/fare.png" alt="">
+                                <h1 class="text-xl md:text-2xl font-bold font-raleway text-[#030712]">550 Taka</h1>
+                                <p class="text-base md:text-lg font-medium font-raleway text-[#0307127F]">Per Seat</p>
+                            </div>
+                        </div>
+        
+                        <!-- seat section -->
+                        <div class="p-8 bg-white rounded-3xl flex flex-col justify-between lg:flex-row ">
+                            <!-- seat organization -->
+                            <div class="w-full lg:w-7/12 lg:pr-6 lg:border-r-2 lg:border-dotted lg:border-[#0307124D]">
+                                <div>
+                                    <h4 class="font-raleway font-semibold text-xl">Select Your Seat</h4>
+                                    <div class="flex justify-between my-6 border-dotted border-y-2 border-[#03071233] py-3">
+                                        <p class="flex gap-1"><img src="./images/seat-gray.png" alt=""><span
+                                                class=" font-inter font-medium text-[#0307127F]">Available</span></p>
+                                        <p class="flex gap-1"><img src="./images/seat-green-filled.png" alt=""><span
+                                                class="font-inter font-medium text-[#1DD100]">Selected</span></p>
+                                    </div>
+                                    <div class="w-full text-right mb-4">
+                                        <button class="btn">
+                                            <img class="bg-none" src="./images/steering-wheel.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <!-- seats -->
+                                <div class="flex font-inter">
+                                    <!-- Seat serial -->
+                                    <div
+                                        class="grid grid-cols-1 justify-items-center place-items-center gap-5 w-1/6 font-inter font-semibold text-[#03071280] ">
+                                        <p class="h-[42px]">A</p>
+                                        <p class="h-[42px]">B</p>
+                                        <p class="h-[42px]">C</p>
+                                        <p class="h-[42px]">D</p>
+                                        <p class="h-[42px]">E</p>
+                                        <p class="h-[42px]">F</p>
+                                        <p class="h-[42px]">G</p>
+                                        <p class="h-[42px]">H</p>
+                                        <p class="h-[42px]">I</p>
+                                        <p class="h-[42px]">J</p>
+                                    </div>
+                                    <div id="all-seats" class="flex justify-between gap-6 w-full ">
+                                        <!-- left column -->
+                                        <div class="flex flex-row justify-between items-center gap-4 ">
+                                            <!-- column 1 -->
+                                            <div id="column-1" class="grid grid-cols-1 gap-4 ">
+                                                <!-- <button id="A1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">A1</button>
+                                                <button id="B1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">B1</button>
+                                                <button id="C1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">C1</button>
+                                                <button id="D1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">D1</button>
+                                                <button id="E1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">E1</button>
+                                                <button id="F1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">F1</button>
+                                                <button id="G1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">G1</button>
+                                                <button id="H1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">H1</button>
+                                                <button id="I1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">I1</button>
+                                                <button id="J1"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">J1</button> -->
+                                            </div>
+                                            <!-- column 2 -->
+                                            <div class="grid grid-cols-1 gap-4 ">
+                                                <button id="A2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">A2</button>
+                                                <button id="B2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">B2</button>
+                                                <button id="C2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">C2</button>
+                                                <button id="D2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">D2</button>
+                                                <button id="E2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">E2</button>
+                                                <button id="F2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">F2</button>
+                                                <button id="G2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">G2</button>
+                                                <button id="H2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">H2</button>
+                                                <button id="I2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">I2</button>
+                                                <button id="J2"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">J2</button>
+                                            </div>
+                                        </div>
+                                        <!-- right column -->
+                                        <div class="flex flex-row justify-between items-center gap-4">
+                                            <!-- column 3 -->
+                                            <div class="grid grid-cols-1 gap-4 ">
+                                                <button id="A3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">A3</button>
+                                                <button id="B3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">B3</button>
+                                                <button id="C3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">C3</button>
+                                                <button id="D3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">D3</button>
+                                                <button id="E3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">E3</button>
+                                                <button id="F3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">F3</button>
+                                                <button id="G3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">G3</button>
+                                                <button id="H3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">H3</button>
+                                                <button id="I3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">I3</button>
+                                                <button id="J3"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">J3</button>
+                                            </div>
+                                            <!-- column 4 -->
+                                            <div class="grid grid-cols-1 gap-4 ">
+                                                <button id="A4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">A4</button>
+                                                <button id="B4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">B4</button>
+                                                <button id="C4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">C4</button>
+                                                <button id="D4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">D4</button>
+                                                <button id="E4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">E4</button>
+                                                <button id="F4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">F4</button>
+                                                <button id="G4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">G4</button>
+                                                <button id="H4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">H4</button>
+                                                <button id="I4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">I4</button>
+                                                <button id="J4"
+                                                    class="seat btn w-auto md:w-[120px] lg:w-[80px] font-semibold text-[#03071280]">J4</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- slected seat & personal details -->
+                            <div class="w-full mt-6 lg:mt-0 lg:w-2/5 lg:pl-6">
+                                <h4 class="font-raleway font-semibold pb-6 text-xl border-b-2 border-dotted border-[#0307124D]">
+                                    Selected Seat</h4>
+        
+                                <!-- seat details -->
+                                <div class="bg-[#F7F8F8] rounded-3xl p-6 my-6">
+                                    <div class="flex justify-between font-medium">
+                                        <p>Seat <span id="seats-count"
+                                                class="bg-[#1DD100] px-2 rounded-3xl text-sm text-white font-inter font-bold">0</span>
+                                        </p>
+                                        <p>Class</p>
+                                        <p>Price</p>
+                                    </div>
+                                    <div id="selected-seat"
+                                        class="border-b-2 border-t-2 border-dotted border-[#0307124D] py-2 my-2 text-[#03071299]">
+        
+                                        <!-- Content will be added dinamicallly -->
+        
+                                    </div>
+                                    <div class="flex justify-between font-medium">
+                                        <p>Total Amount</p>
+                                        <p>BDT <span id="total-price">0</span></p>
+                                    </div>
+                                    
+                                </div>
+        
+                                <!-- pessenger details -->
+        
+                                <div>
+                                    <label class="form-control w-full max-w-xs mb-5">
+                                        <span class="label-text font-inter font-semibold mb-3">Passenger Name*</span>
+                                        <input type="text" placeholder="Enter your name"
+                                            class="input input-bordered w-full max-w-xs p-4 font-inter" required />
+                                    </label>
+                                    <label class="form-control w-full max-w-xs mb-5">
+                                        <span class="label-text font-inter font-semibold mb-3">Phone Number*</span>
+                                        <input id="phone" type="tel" placeholder="Enter your phone number"
+                                            class="input input-bordered w-full max-w-xs p-4 font-inter" required />
+                                    </label>
+                                    <label class="form-control w-full max-w-xs mb-5">
+                                        <span class="label-text font-inter font-semibold mb-3">Email ID*</span>
+                                        <input type="email" placeholder="Enter your email id"
+                                            class="input input-bordered w-full max-w-xs p-4 font-inter" />
+                                    </label>
+        
+                                    <button id="next-btn"
+                                        class="btn btn-disabled bg-[#1DD100] w-full md:w-1/2 lg:w-full text-white font-raleway font-extrabold"
+                                        onclick="my_modal_5.showModal()">Next</button>
+                                    
+        
+                                    <dialog id="my_modal_5" class="modal modal-center sm:modal-middle">
+                                        <div
+                                            class="modal-box bg-[#FFFFFF] md:py-10 md:px-20 md:h-[90%] font-roboto flex flex-col justify-center items-center space-y-4 md:space-y-7s">
+                                            <img src="./images/success.png" alt="">
+                                            <h3 class="font-bold text-2xl font-roboto text-[#27AE60]">SUCCESS</h3>
+                                            <div class="">
+                                                <p class="text-center font-medium text-xl text-[#4A4A4A] mb-2">Thank you for Booking
+                                                    Our
+                                                    Bus Seats.
+                                                    We are working hard to find the best service and deals for you.</p>
+                                                <p class="text-center font-light text-xl text-[#4A4A4A]">Shortly you will find a
+                                                    confirmation
+                                                    in your email.</p>
+                                            </div>
+                                            <div class="modal-action">
+                                                <form method="dialog w-1/2">
+                                                    <!-- if there is a button in form, it will close the modal -->
+                                                    <button class="btn w-full rounded-3xl bg-[#27AE60] font-semibold text-lg text-white px-20">Continue</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
+                                </div>
+        
+                                <!-- policy -->
+                                <div class="flex justify-between w-full lg:w-full md:w-1/2 mt-6">
+                                    <p class="text-[#2f333d99] font-inter text-sm border-b-2 border-[#68718599]"><a
+                                            href="">Terms and Conditions</a></p>
+                                    <p class="text-[#2f333d99] font-inter text-sm border-b-2 border-[#68718599]"><a
+                                            href="">Cancellation Policy</a></p>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                </div>
+    </main>
+
+
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/ticket.js"></script>
+</body>
+</html>
