@@ -1,23 +1,29 @@
 <?php
+
+// Include the database connection file
+include 'db-connection.php';
 header("Access-Control-Allow-Origin: *"); // Allow any domain to access this resource
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Allow specific HTTP methods
 
-$servername = "localhost"; // Change if necessary
-$username = "root"; // Change if necessary
-$password = ""; // Change if necessary
-$dbname = "bus-schedules"; // Change if necessary
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Get search parameters
+$from = isset($_GET['from']) ? $_GET['from'] : '';
+$to = isset($_GET['to']) ? $_GET['to'] : '';
+
+
+$sql = "SELECT * FROM bus_schedules WHERE 1=1";
+
+if ($from != '') {
+    $sql .= " AND departureCity = '" . $conn->real_escape_string($from) . "'";
+}
+if ($to != '') {
+    $sql .= " AND arrivalCity = '" . $conn->real_escape_string($to) . "'";
 }
 
-// Fetch data
-$sql = "SELECT * FROM bus_schedules";
 $result = $conn->query($sql);
+
+
 
 $busSchedules = array();
 if ($result->num_rows > 0) {
@@ -25,6 +31,7 @@ if ($result->num_rows > 0) {
         $busSchedules[] = $row;
     }
 }
+
 
 // Close the connection
 $conn->close();

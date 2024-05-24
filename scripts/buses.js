@@ -1,19 +1,22 @@
 function displayBuses() {
     const busesContainer = document.getElementById('buses-container');
 
-    fetch('http://localhost/inc/api/bus-schedules.php')
-        .then(response => response.json())
-        .then(data => {
+    const busSchedules = JSON.parse(localStorage.getItem('busSchedules'));
 
-            data.forEach(schedule => {
-                console.log(schedule);
-                const scheduleElement = document.createElement('div');
-                scheduleElement.classList.add('flex', 'justify-between', 'gap-5', 'bg-slate-100', 'py-5', 'px-4', 'rounded-xl', 'mb-4');
+    if (busSchedules && busSchedules.length > 0) {
+        busSchedules.forEach(schedule => {
+            console.log(schedule);
+            const scheduleElement = document.createElement('div');
+            scheduleElement.classList.add('flex', 'justify-between', 'gap-5', 'bg-slate-100', 'py-5', 'px-4', 'rounded-xl', 'mb-4');
 
-                scheduleElement.innerHTML = `
+            scheduleElement.innerHTML = `
             <h2 class="text-xl font-semibold flex-grow w-1/4 ">${schedule.busName}</h2>
             <p class="text-xl font-semibold flex-grow w-1/4 ">
+             ${schedule.departureCity}</p>
+            <p class="text-xl font-semibold flex-grow w-1/4 ">
              ${schedule.departureTime}</p>
+            <p class="text-xl font-semibold flex-grow w-1/4 ">
+            ${schedule.arrivalCity}</p>
             <p class="text-xl font-semibold flex-grow w-1/4 ">
             ${schedule.arrivalTime}</p>
             <p class="text-xl font-semibold flex-grow w-1/4 ">
@@ -22,13 +25,17 @@ function displayBuses() {
             BDT ${schedule.fare}</p>
             <button onclick="loadBookingPage()" id="view-seats-btn" class="btn bg-[#1DD100] text-white ">View Seats</button>
         `;
-                busesContainer.appendChild(scheduleElement);
-            });
+            busesContainer.appendChild(scheduleElement);
+        });
 
-        })
-}
+    }
+    else{
 
-function loadBookingPage(){
+    }
+};
+
+
+function loadBookingPage() {
     window.location.replace('../seat.html')
 }
 

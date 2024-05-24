@@ -4,65 +4,66 @@ function scrollFunction() {
     element.scrollIntoView();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("connected");
 
-    // utility
+
+function getElement(id) {
     
-
-
-    let leavingFrom = '';
-    let goingTo = '';
-    let departingDate = '';
-    function getElement(id) {
-        const element = document.getElementById(id);
-        if (!element) {
-            console.error(`Element with ID "${id}" not found.`);
-        }
-        return element;
+    const element = document.getElementById(id);
+    if (!element) {
+        console.error(`Element with ID "${id}" not found.`);
     }
+    return element;
+}
 
-    const leavingFromElement = getElement('leaving-from');
-    const goingToElement = getElement('going-to');
-    const dateInput = getElement('departing-date');
-    const searchBtn = getElement('search-btn');
+let searchFrom=''
+let searchTo=''
+let searchDate='' 
+let fare = ''
+let departureTime = ''
 
-    if (leavingFromElement) {
-        leavingFromElement.addEventListener('change', () => {
-            leavingFrom = leavingFromElement.value;
-            console.log('Leaving From:', leavingFrom);
-        });
-    }
 
-    if (goingToElement) {
-        goingToElement.addEventListener('change', () => {
-            goingTo = goingToElement.value;
-            console.log('Going To:', goingTo);
-        });
-    }
+const departingDate = getElement('departing-date')
+const leavingFromElement = getElement('leaving-from')
+const goingToElement = getElement('going-to')
+const searchButtonElement= getElement('search-btn')
 
-    if (dateInput) {
-        dateInput.addEventListener('change', () => {
-            departingDate = dateInput.value;
-            console.log('Selected date:', departingDate);
-        });
-    }
 
-    if (searchBtn) {
-        searchBtn.addEventListener('click', () => {
-            if (leavingFrom && goingTo && departingDate) {
-                console.log('Search Criteria:', leavingFrom, goingTo, departingDate);
-                window.location.replace("../buses.html");
-
-                // Assuming these functions are defined elsewhere
-                setTextById('from', leavingFrom);
-                setTextById('to', goingTo);
-                setTextById('boarding', leavingFrom);
-                setTextById('dropping', goingTo);
-            } else {
-                console.log('Please fill in all fields.');
-            }
-        });
-    }
+leavingFromElement.addEventListener('change', (e) => {
+    searchFrom = e.target.value
 
 });
+
+
+goingToElement.addEventListener('change', (e) => {
+    searchTo = e.target.value
+});
+
+
+
+departingDate.addEventListener('change', () => {
+    searchDate = departingDate.value;
+   
+});
+
+
+
+searchButtonElement.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+
+    console.log({searchFrom},{searchTo});
+    const response = await fetch(`http://localhost/inc/api/bus-schedules.php?from=${searchFrom}&to=${searchTo}`);
+    const busSchedules = await response.json();
+
+    localStorage.setItem('busSchedules', JSON.stringify(busSchedules));
+    localStorage.setItem('searchFrom', JSON.stringify(searchFrom))
+    localStorage.setItem('searchTo', JSON.stringify(searchTo))
+    localStorage.setItem('searchDate', JSON.stringify(searchDate))
+
+
+
+    window.location.href = '../buses.html'; 
+
+});
+
+
