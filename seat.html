@@ -73,7 +73,7 @@
                                         <img class="w-[50px] h-[40px] lg:w-[60px] lg:h-[50px]" src="./images/bus-logo.png"
                                             alt="">
                                         <div>
-                                            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold font-raleway">PHero Paribahan
+                                            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold font-raleway">P Paribahan
                                             </h4>
                                             <p class=" text-xs md:text-sm  lg:text-base font-inter text-[#03071299]">
                                                 Coach-009-WEB ! AC_Business</p>
@@ -90,7 +90,7 @@
                                         <span>Route</span><span id="search-from"></span>-<span id="search-to"></span>
                                     </p>
                                     <p class="flex justify-between border-dotted border-b-2 border-[#03071233] pb-3">
-                                        <span>Departure Time</span><span>9:00 PM</span>
+                                        <span>Departure Time</span><span  id="departing-time">9:00 PM</span>
                                     </p>
                                     <p class="flex flex-col lg:flex-row justify-between  gap-2 space-y-4 lg:space-y-0">
                                         <Button class="btn">Boarding Point - <span id="boarding"></span></Button>
@@ -105,7 +105,7 @@
                             <div
                                 class="w-full md:w-1/5 flex flex-row md:flex-col justify-center items-center gap-4 md:space-y-1 mb-4 md:mb-0">
                                 <img class="w-[40px]" src="./images/fare.png" alt="">
-                                <h1 class="text-xl md:text-2xl font-bold font-raleway text-[#030712]">550 Taka</h1>
+                                <h1 id="seat-fare" class="text-xl md:text-2xl font-bold font-raleway text-[#030712]">550 Taka</h1>
                                 <p class="text-base md:text-lg font-medium font-raleway text-[#0307127F]">Per Seat</p>
                             </div>
                         </div>
@@ -119,6 +119,7 @@
                                     <div class="flex justify-between my-6 border-dotted border-y-2 border-[#03071233] py-3">
                                         <p class="flex gap-1"><img src="./images/seat-gray.png" alt=""><span
                                                 class=" font-inter font-medium text-[#0307127F]">Available</span></p>
+                                        
                                         <p class="flex gap-1"><img src="./images/seat-green-filled.png" alt=""><span
                                                 class="font-inter font-medium text-[#1DD100]">Selected</span></p>
                                     </div>
@@ -145,12 +146,12 @@
                                         <p class="h-[42px]">I</p>
                                         <p class="h-[42px]">J</p>
                                     </div>
-                                    <div id="all-seats" class="flex justify-between gap-6 w-full ">
-                                        <div class="flex flex-col gap-4" id="column-1"></div>
-                                        <div class="flex flex-col gap-4" id="column-2"></div>
-                                        <div class="flex flex-col gap-4 w-72" id="column-5"></div>
-                                        <div class="flex flex-col gap-4" id="column-3"></div>
-                                        <div class="flex flex-col gap-4" id="column-4"></div>
+                                    <div id="" class="flex justify-between gap-6 w-full ">
+                                        <div class="all-seats flex flex-col gap-4" id="column-1"></div>
+                                        <div class="all-seats flex flex-col gap-4" id="column-2"></div>
+                                        <div class="all-seats flex flex-col gap-4 w-72" id="column-5"></div>
+                                        <div class="all-seats flex flex-col gap-4" id="column-3"></div>
+                                        <div class="all-seats flex flex-col gap-4" id="column-4"></div>
                                     </div>
                                 </div>
                             </div>
@@ -248,8 +249,7 @@
     </main>
 
     <script src="./scripts/seats.js"></script>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/ticket.js"></script>
+    <!-- <script src="./scripts/ticket.js"></script> -->
 </body>
 </html>
 
