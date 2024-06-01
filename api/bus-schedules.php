@@ -24,7 +24,7 @@
                         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li><a href="./index.php" class="text-[#030712B3] text-lg font-semibold font-raleway">Home</a></li>
                             <li><a href="./about.php" class="text-[#030712B3] text-lg font-semibold font-raleway">About</a></li>
-                            <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Contact Us</a></li>
+                            <li><a href="./contact.php" class="text-[#030712B3] text-lg font-semibold font-raleway">Contact Us</a></li>
                             <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Search</a></li>
                         </ul>
                     </div>
@@ -35,7 +35,7 @@
                         <li><a href="./index.php" class="text-[#030712B3] text-lg font-semibold font-raleway">Home</a>
                         </li>
                         <li><a href="./about.php" class="text-[#030712B3] text-lg font-semibold font-raleway">About</a></li>
-                        <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Contact Us</a></li>
+                        <li><a href="./contact.php" class="text-[#030712B3] text-lg font-semibold font-raleway">Contact Us</a></li>
                         <li><a class="text-[#030712B3] text-lg font-semibold font-raleway">Search</a></li>
                     </ul>
                 </div>

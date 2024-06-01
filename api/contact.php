@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Contact Us</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/style.css">
@@ -47,28 +47,22 @@
         </nav>
     </header>
     <main>
-        <div class="bg-[#F7F8F8] rounded-3xl border-t-2 border-[#1DD100] py-16">
-            <div class="mt-10 md:mb-20 mx-5 lg:w-[80%] lg:mx-auto">
-                <div class="flex flex-col justify-center items-center mb-20 border-2 border-[#1DD100] p-5 rounded-xl">
-                    <h1 class="text-[#1DD100] font-semibold text-4xl">Company Profile</h1>
-                    <p class=" mx-auto text-center text-lg font-medium mt-5 text-[#030712B3]">P Paribahan is apparently a family owned transport company specializing in transportation of passenger bus services since 1990. From a humble beginning of local services, our transport system encompasses all reachable areas of Bangladesh and also beyond the border, extending our reach to Kolkata in India.
-                        <br>
-                        We worked hard and honest, we put our vision forward and explored ways and means to continuously improve passenger comfort, and as a result, we were able to introduce the 1st ever Air- Conditioned bus services in Bangladesh. We take pride in mentioning that our fleet of buses includes the most luxurious models of VOLVO and SCANIA Imported from Europe, which provide the ultimate in passenger comfort and safety
+        <div class="bg-[#F7F8F8] rounded-3xl mb-5 border-t-2 border-b-2 border-[#1DD100] ">
+            <div class="mt-5 mx-5 lg:w-[90%] lg:mx-auto">
+                <div class="flex justify-between mb-5 p-5 rounded-xl">
+                    <div class="">
+                        <h1 class="text-[#1DD100] mb-5 font-semibold text-3xl">Head Office</h1>
+                        <p class="font-medium mb-2 text-[#030712B3]">9/2, Rajarbagh, Dhaka – 1217</p>
+                        <p class="font-medium mb-2 text-[#030712B3]">TEL : +88 02 *******</p>
+                        <p class="font-medium mb-2 text-[#030712B3]">Fax : +088-02-*******</p>
+                        <p class="font-medium mb-2 text-[#030712B3]">Email : pparibahan@gmail.com</p>
+                    </div>
+                    <div>
+                        <h1 class="text-[#1DD100] mb-5 font-semibold text-3xl">Call Center</h1>
+                        <p class="font-medium mb-3 text-[#030712B3]">MOB : 096133*****</p>
+                        <p class="font-medium mb-3 text-[#030712B3]">TEL : +88 02 *******</p>
+                    </div>
 
-                    </p>
-                </div>
-                <div class="flex flex-col justify-center items-center mb-20 border-2 border-[#1DD100] p-5 rounded-xl">
-                    <h1 class="text-[#1DD100] font-semibold text-4xl">Our Mission</h1>
-                    <p class=" mx-auto text-center text-lg font-medium mt-5 text-[#030712B3]">The mission of the Transport Company may be categorized by 3 principal activities as follows.</p>
-                    <ul class=" mx-auto text-center text-lg font-medium mt-5 text-[#030712B3]">
-                        <li>Aim for efficient services through constant development towards world-class standards. The priorities are safety, convenience, cleanliness, modernity and punctuality on each and every journey.</li>
-                        <li>Create customer satisfaction and meet passenger needs. The service network must allow for ease of connections and uninterrupted nationwide travel.</li>
-                        <li>Implement a system of management that is both efficient and streamlined. Capitalise on the potential of employees, by building teamwork. Reduce waste and non-productivity, in the interest of quality management and to compete with the private sector.</li>
-                    </ul>
-                </div>
-                <div class="flex flex-col justify-center items-center mb-10 border-2 border-[#1DD100] p-5 rounded-xl">
-                    <h1 class="text-[#1DD100] font-semibold text-4xl">Our Vision</h1>
-                    <p class=" mx-auto text-center text-lg font-medium mt-5 text-[#030712B3]">To be the leader of domestic land based transport, with world-class service standards, efficient management, employing modern technologies and quality personnel.</p>
                 </div>
 
             </div>
